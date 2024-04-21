@@ -4370,13 +4370,11 @@ Camera:Stop()
 
 
 
-    local ToggleAutoclick = Tabs.
-  Setting:AddToggle("ToggleAutoclick", {Title = "Auto Click", Default = true }}
-    
+    local ToggleAutoclick = Tabs.Setting:AddToggle("ToggleAutoclick", {Title = "Auto Click", Default = true })
     ToggleAutoclick:OnChanged(function(Value)
 	   _G.Autoclick = Value
    end)
-Options.ToggleAutoclick:SetValue(true)
+   Options.ToggleAutoclick:SetValue(true)
 
 spawn(function()
 	game:GetService("RunService").RenderStepped:Connect(function()
